@@ -3,7 +3,8 @@ import {
   Box,
   Button,
   Typography,
-  Modal
+  Modal,
+  TextField
 } from '@mui/material'
 
 function BoardCommentWrite() {
@@ -13,7 +14,8 @@ function BoardCommentWrite() {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 600,
+    height : 200,
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -34,11 +36,29 @@ function BoardCommentWrite() {
         >
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              Text in a modal
+              댓글 남기기
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            <Typography id="modal-modal-description" sx={{ mt: 3 }}>
+            <TextField
+              sx={{
+                width : '600px'
+              }}
+              id="filled-search"
+              label="댓글내용"
+              type="search"
+              variant="filled"
+              autoComplete='false'
+              
+            />
             </Typography>
+            <Box
+            position={'absolute'}
+            right={'30px'}
+            bottom={'10px'}
+            >
+            <Button>확인</Button>
+            <Button>취소</Button>
+            </Box>
           </Box>
         </Modal>
       </div>
