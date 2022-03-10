@@ -51,6 +51,7 @@ function BoardList() {
         </Box>
         <Box
           marginLeft={'400px'}
+
         >
         <Search />
         </Box>
